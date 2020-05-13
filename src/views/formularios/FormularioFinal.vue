@@ -220,12 +220,9 @@
                   </tr>
               </table>
           </div>
-
-          <!--break-->
-
-
-        
       </div>
+
+          <!--break page-->
 
       <div class="final" ref="content">
           <div id="clm2">
@@ -315,8 +312,6 @@ downloadWithCSS() {
 
 }
 
-
-
 /*
   methods: {
     
@@ -346,11 +341,6 @@ downloadWithCSS() {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-@media print{
-   #pagebreak{ page-break-before: always; } 
-}
-
-
 #formilarioFaceFinal button {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: gray;
@@ -369,10 +359,15 @@ downloadWithCSS() {
     color: #fff;
 }
 
-@media (max-width: 807px) {
+@media (max-width: 1266px) {
   .final div{
     display: none;
   }
+
+  #formilarioFaceFinal{
+    display: none;
+  }
+
 }
 
 .final{
