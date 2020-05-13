@@ -1,0 +1,11 @@
+#nav {
+    display: grid;
+    gap: 0.2em;
+    justify-content: center;
+    background-color: coral;
+}
+
+#nav router-link {
+    background-color: chartreuse;
+    text-decoration: none;
+}

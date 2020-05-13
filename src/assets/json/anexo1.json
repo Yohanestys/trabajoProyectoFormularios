@@ -1,0 +1,134 @@
+{
+    "usuario": [{
+            "nombre": "MARIO",
+            "apellidos": "GARCÍA GARCÍA",
+            "nif": "70359295H",
+            "fechaNacimiento": "2002-10-10",
+            "tel": "654321234",
+            "rol": "1",
+            "domicilio": "calle alta 1"
+
+        }, {
+            "nombre": "JORGE",
+            "apellidos": "MARTIN DIAZ",
+            "nif": "04230025A",
+            "fechaNacimiento": "1988-11-10",
+            "tel": "687543210",
+            "rol": "1",
+            "domicilio": "calle baja 1"
+
+        },
+
+
+        {
+            "nombre": "MARIA ROSARIO",
+            "apellidos": "DEL VALLE",
+            "nif": "70356474A",
+            "fechaNacimiento": "1995-08-05",
+            "tel": "698712354",
+            "rol": "1",
+            "domicilio": "calle plana 1"
+        }
+    ],
+
+    "centros": [{
+            "nombre": "IES Azarquiel",
+            "cif": "cifazarquiel",
+            "codigo": "codigoazarquiel",
+            "telefono": "925284043",
+            "nifDirector": "nif00001",
+            "nombreDirector": "JESÚS GARCÍA NOVILLO",
+            "direccion": "Paseo de San Eugenio, 21  Toledo ( Toledo)",
+            "cPostal": "45003",
+            "email": "45003875.ies@edu.jccm.es",
+            "ciclo": [{
+                    "nombre": "Gestión Administrativa",
+                    "familiaPrefecional": "Administración y Gestión",
+                    "turno": "VESPERTINO",
+                    "nivel": "Medio",
+                    "horarioPractica": "8:00-18:30",
+                    "horasPractica": 400,
+                    "inicioPractica": "23/09/2019",
+                    "finPractica": "12/12/2019"
+
+                },
+
+                {
+
+                    "nombre": "Administración y Gestión",
+                    "familiaPrefecional": "Informatica y comunicaciones",
+                    "turno": "VESPERTINO",
+                    "nivel": "Superior",
+                    "horarioPractica": "8:00-18:30",
+                    "horasPractica": 400,
+                    "inicioPractica": "23/09/2019",
+                    "finPractica": "12/12/2019"
+
+
+                },
+
+                {
+                    "nombre": "Administración de Sistemas Informáticos en Red (ASIR)",
+                    "familiaPrefecional": "Informatica y comunicaciones",
+                    "turno": "VESPERTINO",
+                    "nivel": "Superior",
+                    "horarioPractica": "8:00-18:30",
+                    "horasPractica": 400,
+                    "inicioPractica": "23/09/2019",
+                    "finPractica": "12/12/2019"
+
+
+                }
+            ]
+
+        },
+
+        {
+            "nombre": "IES Alfonso X El Sabio",
+            "cif": "cifAlfonsoX",
+            "codigo": "45004752",
+            "telefono": "925230970",
+            "nifDirector": "nif00002",
+            "nombreDirector": "Director del Alfonso X El Sabio",
+            "direccion": "Cl. Valdehuesa, 6  Toledo ( Toledo)",
+            "cPostal": "45007",
+            "email": "45004752.ies@edu.jccm.es"
+
+        },
+
+        {
+            "nombre": "IES  Carlos III",
+            "cif": "cifCarlosIII",
+            "codigo": "45005562",
+            "telefono": "925212967",
+            "nifDirector": "nif00003",
+            "nombreDirector": "Director Carlos III",
+            "direccion": "Av. De Francia, 5 en Toledo (Toledo)",
+            "cPostal": "45071",
+            "email": "45005562.ies@edu.jccm.es"
+
+        }
+
+    ],
+
+    "empresa": [{
+            "nombre": "Empresa 1",
+            "cif": "cifempreza1",
+            "representanteEmpresa": "JOSÉ LUIS RODRIGUEZ RUIZ",
+            "dniRepresentante": "012345678",
+            "direccion": "Calle 1 Toledo",
+            "cPostal": "45005"
+        },
+
+        {
+            "nombre": "Empresa 2",
+            "cif": "cifempreza1",
+            "representanteEmpresa": "ANTONIO JIMENEZ",
+            "dniRepresentante": "098765432",
+            "direccion": "callejon de los milagros ...",
+            "cPostal": "55555"
+        }
+
+    ]
+
+}
