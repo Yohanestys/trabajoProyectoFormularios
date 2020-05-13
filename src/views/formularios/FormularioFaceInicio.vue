@@ -154,6 +154,12 @@ export default {
     display: none;
   }
 
+  .inicio:first-of-type{
+    width: calc(100% + 10%);
+    left: -5%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
   #formilarioFaceInicio button{
     display: none;
   }
@@ -172,6 +178,7 @@ export default {
   line-height: 26.4px;
   padding-bottom: 8em;
   margin-top: 0em;
+  position: relative;
   padding-top: 5em;
   
 }

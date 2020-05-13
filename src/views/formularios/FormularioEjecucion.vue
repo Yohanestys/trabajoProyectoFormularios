@@ -206,6 +206,10 @@
     display: none;
   }
 
+  .ejecucion:first-of-type{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
   #formilarioFaceEjecucion button{
         display: none;
   }

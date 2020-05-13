@@ -341,6 +341,11 @@ downloadWithCSS() {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+#formilarioFaceFinal button:hover{
+    background-color: lightgray;
+    color: #fff;
+}
+
 #formilarioFaceFinal button {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: gray;
@@ -354,21 +359,22 @@ downloadWithCSS() {
 
 }
 
-#formilarioFaceFinal button:hover{
-    background-color: lightgray;
-    color: #fff;
-}
-
 @media (max-width: 1266px) {
-  .final div{
+  .final *,
+  .final:nth-of-type(2) {
     display: none;
   }
 
-  #formilarioFaceFinal{
+  .final:first-of-type{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  #formilarioFaceFinal button{
     display: none;
   }
 
 }
+
 
 .final{
   display: grid;
