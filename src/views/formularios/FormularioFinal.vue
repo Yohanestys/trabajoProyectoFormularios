@@ -188,20 +188,8 @@
                           <span>3</span>
                       </td>
                   </tr>
-                  <tr v-for="index of 19" :key="index" style="height: 1.2em">
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                  <tr v-for="index of 19" :key="index" :style="{'height': '1.2em'}">
+                      <td v-for="i of 13" :key="i"></td>
                   </tr>
 
                     <tr>
@@ -289,26 +277,26 @@ downloadWithCSS() {
       var height = doc.internal.pageSize.getHeight();
           /** WITH CSS */
           //var canvasElement = document.createElement('canvas'); 
-    var element = document.getElementsByClassName("final");
-          for(var i=0; i<element.length; i++){
-                        await new Promise(function(resolve) {
-          html2canvas(element[i]).then((canvas)=>{
+    var elements = document.getElementsByClassName("final");
+        for(var i=0; i<elements.length; i++){
+            await new Promise((resolve)=>{
+                html2canvas(elements[i]).then((canvas)=>{
                   var img = canvas.toDataURL("image/png", 1.0);
                   doc.addImage(img, 'PNG',0,0, width, height);
 
-              if((i+1) == element.length) {
-                doc.save('anexo4.pdf');
-              }else{
-                doc.addPage();
-              }
-                resolve()
-            
-            });
-            });
-          }
-      })();
+                  if((i+1) == elements.length) {
+                    doc.save('anexo4.pdf');
+                  }else{
+                    doc.addPage();
+                  }
+                  resolve()
+                
+                });
+            }); // fin await
+          } // fin for
+      })(); // fin async
         
-  },
+  }, // fin downloadWithCSS
 
 }
 
@@ -590,13 +578,11 @@ downloadWithCSS() {
         }
         
 .final #fichaCentro table tr:nth-of-type(1) td:nth-of-type(5) {
-            /* tr number 3 */
             margin: 0;
             padding: 0;
         }
         
 .final #fichaCentro table tr:nth-of-type(1) td table {
-            /* tr number 3 */
             width: 100%;
             height: 100%;
             margin: 0;
@@ -605,7 +591,6 @@ downloadWithCSS() {
         }
         
 .final #fichaCentro table tr:nth-of-type(1) td table tr td {
-            /* tr number 3 */
             border-bottom: 0;
             border-right: 0;
             border-spacing: 0;
@@ -617,12 +602,10 @@ downloadWithCSS() {
         }
         
 .final #fichaCentro table tr:nth-of-type(1) td table:first-of-type tr td:first-of-type {
-            /* tr number 3 */
             border-left: 0;
         }
         
 .final #fichaCentro table tr:nth-of-type(1) td table:first-of-type tr:first-of-type td:first-of-type {
-            /* tr number 3 */
             border-top: 0;
         }
         
@@ -673,51 +656,43 @@ downloadWithCSS() {
         }
         
 .final #fichaCentro table tr:nth-child(2) td:nth-of-type(2) {
-            /* tr number 4 */
             text-align: left;
             padding-left: 1em;
         }
         
 .final #fichaCentro table tr:nth-child(2) td:nth-of-type(5) {
-            /* tr number 4 */
             width: 2em;
             padding: 0;
         }
         
 .final #fichaCentro table tr:nth-child(2) td:nth-of-type(6) {
-            /* tr number 4 */
             width: 4em;
             padding: 0;
         }
         
 .final #fichaCentro table tr:nth-child(2) td:nth-of-type(7) {
-            /* tr number 4 */
             width: 4em;
             padding: 0;
         }
         
 .final #fichaCentro table tr:nth-child(2) td:nth-of-type(9) {
-            /* tr number 4 */
             width: 5.92em;
             padding: 0;
             margin: 0;
         }
         
 .final #fichaCentro table tr:nth-child(2) td:nth-of-type(10) {
-            /* tr number 4 */
             width: 5.5em;
             padding: 0;
             margin: 0;
         }
         
 .final #fichaCentro table tr:nth-child(2) td:nth-of-type(11) {
-            /* tr number 4 */
             width: 2.9em;
             padding: 0;
         }
         
 .final #fichaCentro table:first-of-type tr:nth-child(3) td {
-            /* tr number 4 */
             height: 1em;
         }
 
@@ -759,7 +734,7 @@ downloadWithCSS() {
 }
 
 
-
+/* break point */
 /*segunda parte */
 
 .final #clm2{
@@ -807,7 +782,7 @@ downloadWithCSS() {
 
 }
 
-.final #titulo span::before {
+.final #titulo2 span::before {
   content: "";
   display: block;
     
@@ -889,7 +864,6 @@ downloadWithCSS() {
   letter-spacing: 0.02em;
 }
 
-
 .final #cuerpo #fechaFirma{
   display: grid;
   grid-column: 1/3;
@@ -901,7 +875,6 @@ downloadWithCSS() {
 }
 
 .final #cuerpo #fechaFirma>div:first-of-type {
-  
   justify-self: end;
 }
 
@@ -916,12 +889,9 @@ downloadWithCSS() {
   margin-top: 0;
   margin-bottom: 5.5em;
   text-decoration: underline;
-  
 }
 
 .final #cuerpo #fechaFirma #firma p:last-of-type{
   margin-bottom: 0;
 }
-
-
 </style>
