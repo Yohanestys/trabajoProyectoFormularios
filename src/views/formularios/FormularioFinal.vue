@@ -223,6 +223,11 @@
 
           <!--break-->
 
+
+        
+      </div>
+
+      <div class="final" ref="content">
           <div id="clm2">
               <img alt="Clm logo" src="../../assets/img/anexo4/clmAnexo4.png">
           </div>
@@ -241,14 +246,12 @@
             <p>en marcha y desarrollo de los módulos profesionales de Formación en centros de trabajo para todas las enseñanzas y Proyecto para los Ciclos Formativos de grado superior:</p>
 
 
-            
             <span><p>Semestralmente, cada profesor-tutor del módulo profesional de F.C.T., elevará un informe al Director del centro educativo, que a su vez deberá elaborar un informe-general que</p>
             <p>será presentado al Consejo Escolar o Consejo Social sobre el desarrollo del módulo profesional de F.C.T. en los Ciclos Formativos y las relaciones con las empresas y deberá</p>
             <p>cumplimentar las correspondientes fichas estadísticas de seguimiento e Inserción Laboral (Anexo IX) así como cualquier otra documentación que para la gestión del módulo</p>
             <p>profesional de F.C.T., soliciten las Delegaciones Provinciales de la Consejería de Educación, Cultura y Deportes. Los centros remitirán semestralmente copia del informe-general y</p>
             <p>Anexo IX referidos, a la Delegación Provincial correspondiente.</p></span>
           </div>
-
 
           <div id="fechaFirma">
               <div>
@@ -262,8 +265,9 @@
           </div>
 
         </div>
-        
+
       </div>
+
   </div>
 </template>
 
@@ -276,7 +280,46 @@ export default {
     msg: String
   },
 
+
+methods: {
+
+downloadWithCSS() {
+    (async function loop() {
+        // var w = document.getElementsByClassName("final")[0].offsetWidth;
+        // var h = document.getElementsByClassName("final")[0].offsetHeight;
+      const doc = new jsPDF("L", "mm", "a4");
+      var width = doc.internal.pageSize.getWidth();
+      var height = doc.internal.pageSize.getHeight();
+          /** WITH CSS */
+          //var canvasElement = document.createElement('canvas'); 
+    var element = document.getElementsByClassName("final");
+          for(var i=0; i<element.length; i++){
+                        await new Promise(function(resolve) {
+          html2canvas(element[i]).then((canvas)=>{
+                  var img = canvas.toDataURL("image/png", 1.0);
+                  doc.addImage(img, 'PNG',0,0, width, height);
+
+              if((i+1) == element.length) {
+                doc.save('anexo4.pdf');
+              }else{
+                doc.addPage();
+              }
+                resolve()
+            
+            });
+            });
+          }
+      })();
+        
+  },
+
+}
+
+
+
+/*
   methods: {
+    
     downloadWithCSS() {
       var w = document.getElementsByClassName("final")[0].offsetWidth;
       var h = document.getElementsByClassName("final")[0].offsetHeight;
@@ -284,8 +327,8 @@ export default {
       var width = doc.internal.pageSize.getWidth();
       var height = doc.internal.pageSize.getHeight();
       /** WITH CSS */
-      //var canvasElement = document.createElement('canvas');
-      var element = document.getElementsByClassName("final")[0];
+      //var canvasElement = document.createElement('canvas'); */
+    /*  var element = document.getElementsByClassName("final")[1];
       html2canvas(element).then((canvas)=>{
               var img = canvas.toDataURL("image/png", 1.0);
               doc.addImage(img, 'PNG',0,0, width, height);
@@ -294,7 +337,9 @@ export default {
       });
     },
 
-  }
+  }*/
+
+
 };
 </script>
 
@@ -347,6 +392,7 @@ export default {
   position: relative;
   width: calc(100% + 10%);
   left: -5%;
+  margin-bottom: 1em;
   
 }
 
@@ -715,7 +761,7 @@ export default {
 /*segunda parte */
 
 .final #clm2{
-  margin-top: 5em;
+  margin-top: 0;
   grid-column: 1/2;
   grid-row: 5/6;
   justify-self: self-start;
@@ -732,7 +778,7 @@ export default {
 }
 
 .final #titulo2{
-  margin-top: 5em;
+  margin-top: 0em;
   grid-column: 2/6;
   grid-row: 5/6;
   justify-self: center;
@@ -767,7 +813,7 @@ export default {
 
 
 .final #ensen2{
-  margin-top: 5em;
+  margin-top: 0em;
   grid-column: 6/7;
   grid-row: 5/6;
   /*background-color: chocolate;*/

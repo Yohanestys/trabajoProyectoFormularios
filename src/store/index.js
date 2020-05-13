@@ -21,16 +21,6 @@ export default new Vuex.Store({
 
         },
 
-        anexo(state, anexo1) {
-            var anexo = state.anexo1;
-            var algo = []
-            for (var i = 0; i < anexo.length; i++) {
-                algo.push(anexo[i]);
-                console.log(algo[i])
-            }
-
-            return algo;
-        }
     },
     actions: {
         modify({ commit, state }, anexo1) {
