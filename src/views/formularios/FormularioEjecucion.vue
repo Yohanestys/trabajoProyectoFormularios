@@ -201,19 +201,75 @@
     color: #fff;
 }
 
-@media (max-width: 1607px) {
+@media (max-width: 1541px){
   .ejecucion div{
     display: none;
+  }
+
+    #formilarioFaceEjecucion button{
+        display: none;
   }
 
   .ejecucion:first-of-type{
     background-color: rgba(255, 255, 255, 0.5);
   }
 
-  #formilarioFaceEjecucion button{
-        display: none;
-  }
 }
+
+@media (max-width: 1621px) {
+  .ejecucion #tablaDatos table tr td{
+    padding: 0 2.7em;
+  }
+  .ejecucion #tablaActividades table tr th,
+  .ejecucion #tablaActividades table tr td{
+    padding: 0 1.3em;
+  }
+
+
+
+
+}
+
+
+@media (min-width: 1621px) and (max-width: 1654px) {
+  .ejecucion #tablaDatos table tr td{
+    padding: 0 2.8em;
+  }
+  .ejecucion #tablaActividades table tr th,
+  .ejecucion #tablaActividades table tr td{
+    padding: 0 1.4em;
+  }
+
+
+}
+
+
+@media (min-width: 1654px) and (max-width: 1675px) {
+  .ejecucion #tablaDatos table tr td{
+    padding: 0 2.9em;
+  }
+  .ejecucion #tablaActividades table tr th,
+  .ejecucion #tablaActividades table tr td{
+    padding: 0 1.5em;
+  }
+
+
+}
+
+@media (min-width: 1675px) and (max-width: 1686px) {
+  .ejecucion #tablaDatos table tr td{
+    padding: 0 3em;
+  }
+  .ejecucion #tablaActividades table tr th,
+  .ejecucion #tablaActividades table tr td{
+    padding: 0 1.5em;
+  }
+
+
+}
+
+
+
 
 .ejecucion{
   display: grid;

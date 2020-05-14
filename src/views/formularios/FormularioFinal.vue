@@ -382,8 +382,11 @@ downloadWithCSS() {
   position: relative;
   width: calc(100% + 10%);
   left: -5%;
-  margin-bottom: 1em;
   
+}
+
+.final:first-of-type {
+  margin-bottom: 1em;
 }
 
 .final #clm{
